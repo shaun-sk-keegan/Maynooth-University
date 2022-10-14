@@ -1,0 +1,265 @@
+<html>
+    <head>
+        <title>CS230 Assignment 4 - 19480284</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Use Bootstrap for the form styling -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <!-- Use W3.CSS for the Modal -->
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <!-- jQuery and Bootstrap JS -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+        <style>
+            h1 {
+                font-size: 40px;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                text-align: center;
+            }
+            h2 {
+                font-size: 30px;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                text-align: center;
+            }
+            legend {
+                font-size: 30px;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                text-align: left;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Assignment 4 - 19480284</h1>
+        <h2>CRUD Functionality</h2>
+        <br/>
+
+         <!-- 
+        Bootstrap Styled Form,
+        Generated using the Bootsnipp Form Builder and Generator for Bootstrap
+        https://bootsnipp.com/forms
+    -->
+
+    <!--PERSON-->
+    <form class="form-horizontal">
+        <fieldset>
+        
+        <!-- Form Name -->
+        <legend>Customer Details </legend>
+        
+        <!-- Text input-->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="textinput">Title</label>  
+          <div class="col-md-4">
+          <input id="textinput" name="textinput" type="text" placeholder="Eg: Mr" class="form-control input-md">
+          <span class="help-block">Enter the user's title</span>  
+          </div>
+        </div>
+        
+        <!-- Text input-->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="textinput">First Name (Fname)</label>  
+          <div class="col-md-4">
+          <input id="textinput" name="textinput" type="text" placeholder="Eg: Shaun" class="form-control input-md" required="">
+          <span class="help-block">Enter the user's first name</span>  
+          </div>
+        </div>
+        
+        <!-- Text input-->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="textinput">Last Name (Surname)</label>  
+          <div class="col-md-4">
+          <input id="textinput" name="textinput" type="text" placeholder="Eg: Keegan" class="form-control input-md" required="">
+          <span class="help-block">Enter the user's last name</span>  
+          </div>
+        </div>
+        
+        <!-- Text input-->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="textinput">Mobile</label>  
+          <div class="col-md-4">
+          <input id="textinput" name="textinput" type="text" placeholder="Eg: 0812345678" class="form-control input-md" required="">
+          <span class="help-block">Enter the user's phone number</span>  
+          </div>
+        </div>
+        
+        <!-- Text input-->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="textinput">Email</label>  
+          <div class="col-md-4">
+          <input id="textinput" name="textinput" type="text" placeholder="Eg: shaun@mail.com" class="form-control input-md" required="">
+          <span class="help-block">Enter the user's email address</span>  
+          </div>
+        </div>
+
+        <!-- Button -->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="singlebutton">Submit Details</label>
+          <div class="col-md-4">
+          <button id="singlebutton" name="singlebutton" class="btn btn-primary">Submit</button>
+          </div>
+        </div>
+        
+        </fieldset>
+        </form>
+
+        <br/>
+        
+    <!--HOME ADDRESS-->
+    <form class="form-horizontal">
+        <fieldset>
+        
+        <!-- Form Name -->
+        <legend>Home Address</legend>
+        
+        <!-- Text input-->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="textinput">Line 1 (AddressLn1)</label>  
+          <div class="col-md-4">
+          <input id="textinput" name="textinput" type="text" placeholder="Eg: 42" class="form-control input-md" required="">
+          <span class="help-block">Enter the user's home address</span>  
+          </div>
+        </div>
+        
+        <!-- Text input-->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="textinput">Line 2 (AddressLn2)</label>  
+          <div class="col-md-4">
+          <input id="textinput" name="textinput" type="text" placeholder="Eg: AGP" class="form-control input-md">
+          <span class="help-block">Enter the user's home address</span>  
+          </div>
+        </div>
+        
+        <!-- Text input-->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="textinput">Town</label>  
+          <div class="col-md-4">
+          <input id="textinput" name="textinput" type="text" placeholder="Eg: Lucan" class="form-control input-md" required="">
+          <span class="help-block">Enter the user's home town</span>  
+          </div>
+        </div>
+        
+        <!-- Text input-->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="textinput">County</label>  
+          <div class="col-md-4">
+          <input id="textinput" name="textinput" type="text" placeholder="Eg: Dublin" class="form-control input-md" required="">
+          <span class="help-block">Enter the user's home county</span>  
+          </div>
+        </div>
+        
+        <!-- Text input-->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="textinput">Eircode</label>  
+          <div class="col-md-4">
+          <input id="textinput" name="textinput" type="text" placeholder="Eg: K78XXXX" class="form-control input-md">
+          <span class="help-block">Enter the user's Eircode</span>  
+          </div>
+        </div>
+        
+        <!-- Button -->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="singlebutton">Submit Details</label>
+          <div class="col-md-4">
+            <button id="singlebutton" name="singlebutton" class="btn btn-primary">Submit</button>
+          </div>
+        </div>
+        
+        </fieldset>
+        </form>
+
+    <br/>
+    <!--SHIPPING ADDRESS-->
+    <form class="form-horizontal">
+        <fieldset>
+        
+        <!-- Form Name -->
+        <legend>Shipping Address</legend>
+        
+        <!-- Text input-->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="textinput">Line 1 (AddressLn1)</label>  
+          <div class="col-md-4">
+          <input id="textinput" name="textinput" type="text" placeholder="Eg: 42" class="form-control input-md" required="">
+          <span class="help-block">Enter the user's shipping address</span>  
+          </div>
+        </div>
+        
+        <!-- Text input-->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="textinput">Line 2 (AddressLn2)</label>  
+          <div class="col-md-4">
+          <input id="textinput" name="textinput" type="text" placeholder="Eg: AGP" class="form-control input-md">
+          <span class="help-block">Enter the user's shipping address</span>  
+          </div>
+        </div>
+        
+        <!-- Text input-->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="textinput">Town</label>  
+          <div class="col-md-4">
+          <input id="textinput" name="textinput" type="text" placeholder="Eg: Lucan" class="form-control input-md" required="">
+          <span class="help-block">Enter the user's town of shipping</span>  
+          </div>
+        </div>
+        
+        <!-- Text input-->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="textinput">County</label>  
+          <div class="col-md-4">
+          <input id="textinput" name="textinput" type="text" placeholder="Eg: Dublin" class="form-control input-md" required="">
+          <span class="help-block">Enter the user's county of shipping</span>  
+          </div>
+        </div>
+        
+        <!-- Text input-->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="textinput">Eircode</label>  
+          <div class="col-md-4">
+          <input id="textinput" name="textinput" type="text" placeholder="Eg: K78XXXX" class="form-control input-md">
+          <span class="help-block">Enter the user's Eircode of shipping</span>  
+          </div>
+        </div>
+        
+        <!-- Button -->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="singlebutton">Submit Details</label>
+          <div class="col-md-4">
+            <button id="singlebutton" name="singlebutton" class="btn btn-primary">Submit</button>
+          </div>
+        </div>
+        
+        </fieldset>
+        </form>
+    
+    <br/>
+    <!--SHOW DATABASE-->
+    <form class="form-horizontal">
+        <fieldset>
+        
+        <!-- Form Name -->
+        <legend>Show DB</legend>
+        
+        <!-- Textarea -->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="textarea">Database 'cs230_u200186'</label>
+          <div class="col-md-4">                     
+            <textarea class="form-control" id="textarea" name="textarea">........
+        </textarea>
+          </div>
+        </div>
+        
+        <!-- Button -->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="singlebutton"></label>
+          <div class="col-md-4">
+            <button id="singlebutton" name="singlebutton" class="btn btn-primary">Show Database</button>
+          </div>
+        </div>
+        
+        </fieldset>
+        </form>
+       
+
+    </body>
+</html>
